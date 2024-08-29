@@ -65,7 +65,7 @@ public class Archivo {
             flujosalidaAux.close();
             Files.move(archivoAux.toPath(), archivo.toPath(),StandardCopyOption.REPLACE_EXISTING);
             escritura = new FileOutputStream("ventas.txt",true);
-            flujosalida = new ObjectOutputStream(escritura);
+            flujosalida = new MyOOS(escritura);
         } catch (Exception e) {
             e.printStackTrace();
         }

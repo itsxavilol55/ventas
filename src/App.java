@@ -27,15 +27,19 @@ public class App {
         Venta venta4 = new Venta("4","10/12/14");
         venta4.AgregarLinea(1,1,1);
         venta4.AgregarLinea(2,3,3);
-        arc1.guardar(venta4);
         
         venta1 = arc1.recuperar("1");
         venta2 = arc1.recuperar("2");
         arc1.borrar("1");
-        arc1.guardar(venta1);
-        arc1.guardar(venta2);
-        arc1.guardar(venta3);
         arc1.guardar(venta4);
+        arc1.borrar("2");
+        arc1.borrar("3");
+        arc1.guardar(venta3);
+        arc1.guardar(venta2);
+        // arc1.guardar(venta1);
+        // arc1.guardar(venta2);
+        // arc1.guardar(venta3);
+        // arc1.guardar(venta4);
         for (Venta venta : arc1.obtenerVentas()) {
             System.out.println(venta);
         }
